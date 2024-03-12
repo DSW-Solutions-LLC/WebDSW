@@ -1,0 +1,33 @@
+/* LogoHeader.css */
+
+
+:root {
+  --margen-adicional: 18%;
+}
+
+.logo-container .logo-img {
+  object-fit: cover;
+  width: 20%;
+  height: 5%;
+
+}
+
+
+
+/* Estilos adicionales para mejorar la legibilidad en dispositivos pequeños */
+/* 
+@media only screen and (max-width: 600px) { */
+@media screen and (min-width: 1100px) {
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-container img {
+    width: 20%;
+    margin-left: 0;
+    margin-bottom: 1vh;
+  }
+
+
+}
