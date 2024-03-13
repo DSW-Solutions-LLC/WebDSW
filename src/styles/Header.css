@@ -59,7 +59,7 @@
 }
 
 
-@media (min-width: 575px) {
+@media (min-width: 675px) {
   .nav-item {
     margin-right: 39px;
     font-size: 20px;
