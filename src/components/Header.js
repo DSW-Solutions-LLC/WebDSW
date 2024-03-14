@@ -42,10 +42,10 @@ function Header() {
 
         <div className="navbar-collapse" id="navbarHeader">
               <ul className="navbar-nav ml-auto my-2 my-lg-0"> 
-                <ItemMenu nombre="Soluciones" referencia="#" /> 
-                <ItemMenu nombre="Apps" referencia="#" /> 
-                <ItemMenu nombre="Proyectos" referencia="#" /> 
-                <ItemMenu nombre="Clientes" referencia="#" />  
+                <ItemMenu nombre="Soluciones" referencia="#solutions" /> 
+                <ItemMenu nombre="Apps" referencia="#solutions1" /> 
+                <ItemMenu nombre="Proyectos" referencia="#solutions2" /> 
+                <ItemMenu nombre="Clientes" referencia="#solutions3" />  
               </ul>
         </div>
       </nav>    

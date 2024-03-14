@@ -47,3 +47,12 @@ section {
 .bg-dark {
   background-color: #343a40 !important;
 }
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
