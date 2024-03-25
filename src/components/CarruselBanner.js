@@ -46,6 +46,7 @@ class CarouselBanners extends React.Component {
                     <a className="btn btn-slide" href="/communities.html">Contactanos</a>
                 </div> 
                 <img src="https://www.thesandbox.com.ar/assets/images/banners/banner-slider-06.webp" className="d-block" alt="Diapositiva 1"></img>
+                {/* 1923 x 925 */}
             </div>  
 
             <div className="carousel-item">
@@ -54,7 +55,7 @@ class CarouselBanners extends React.Component {
                     <p className="slide-text">nuestras últimas creaciones</p>
                     <a className="btn btn-slide" href="/communities.html">Proyectos</a>
                 </div> 
-                <img src="https://www.thesandbox.com.ar/assets/images/banners/banner-slider-07.webp" className="d-block" alt="Diapositiva 1"></img>
+                <img src="https://www.thesandbox.com.ar/assets/images/banners/banner-slider-05.webp" className="d-block" alt="Diapositiva 1"></img>
             </div> 
         </Slider>
       );
