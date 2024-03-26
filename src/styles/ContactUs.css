@@ -30,7 +30,7 @@
     font-family: 'lato', 'bold';
     margin-top: 50px;
     margin-bottom: 25px;
-    padding: 0px 300px;
+    padding: 0px 200px;
 }
 
 .agile-methodology .text-additional2 {
@@ -53,4 +53,32 @@
 
 .col-img-method img {
     width: 80%;
+}
+
+@media (max-width: 1000px) {
+    .agile-methodology .text-additional1 {
+        color: white;
+        font-size: 20px;
+        font-family: 'lato', 'bold';
+        padding: 0px 0px;
+    }
+
+    .agile-methodology .text-additional3 {
+        color: white;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 580px) {
+    .col-img-method {
+        display: none;
+        width: 100%;
+    }
+
+    .col-img-method img {
+        display: none;
+        width: 80%;
+    }
 }

@@ -14,7 +14,7 @@ function ContactUs() {
                                 <div className="col-12 text-center">
                                     <p className="text-title bold">Contactanos</p>                                    
                                 </div>
-                                <div className="col-12 text-center">
+                                <div className="col-12">
                                     <p className="text-additional1">Si compartís la adrenalina por crear, por ver cada cambio como una oportunidad y buscás el desafío constante, entonces hablamos el mismo idioma.</p>
                                 </div>
                                 <div className="col-12 text-center pb-5 col-img-method">
