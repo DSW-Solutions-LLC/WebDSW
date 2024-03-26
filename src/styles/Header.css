@@ -58,6 +58,11 @@
   display: none !important;
 }
 
+#navbarHeader .nav-item {
+  margin-right: 48px;
+  font-size: 24px;
+}
+
 
 @media (min-width: 675px) {
   .nav-item {

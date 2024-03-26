@@ -17,7 +17,7 @@ function Solutions() {
          <div className="row">
             
             <ItemSolutions 
-                title = "Digital Transformation" 
+                title = "Automatizaciones" 
                 img= "https://www.thesandbox.com.ar/assets/images/services/digital-transformation.webp" 
                 text="Generamos productos digitales co-creados con tu equipo." 
                 arrayText={[ 
@@ -30,7 +30,7 @@ function Solutions() {
             />   
 
             <ItemSolutions 
-                title = "Digital Factory" 
+                title = "Aplicaciones Mobile" 
                 img= "https://www.thesandbox.com.ar/assets/images/services/digital-transformation.webp" 
                 text="Generamos productos digitales co-creados con tu equipo."
                 arrayText={[ 
@@ -43,7 +43,7 @@ function Solutions() {
             />  
 
             <ItemSolutions 
-                title = "Digital Business Growth" 
+                title = "Integraciones" 
                 img= "https://www.thesandbox.com.ar/assets/images/services/digital-transformation.webp" 
                 text="Generamos productos digitales co-creados con tu equipo."
                 arrayText={[ 

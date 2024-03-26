@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header'; 
 import CarouselBanners from './components/CarruselBanner';
 import Solutions from './components/Solutions';
+import ContactUs from './components/ContactUs';
 
  
 
@@ -14,7 +15,8 @@ function App() {
       <div className="border-gradient"></div>
       <Header />  
       <CarouselBanners />        
-      <Solutions />   
+      <Solutions />
+      <ContactUs />      
     </div>
   );
 }
