@@ -36,10 +36,10 @@ function Header() {
                 <ItemMenu handleCloseNav={()=>{}} nombre="Contactanos" referencia="#contactus" />  
               </ul>
               <div onClick={handleNav} className='block md:hidden' >
-                { !nav ? <AiOutlineClose size={30} color='white' /> :
+                { nav ? <AiOutlineClose size={30} color='white' /> :
                 <AiOutlineMenu size={30} color='white' /> }
               </div> 
-              <div className={!nav ? 'fixed z-50 left-0 top-24 w-[100%] ease-in-out duration-500 bg-black' : 'fixed left-[-100%]'}> 
+              <div className={nav ? 'fixed z-50 left-0 top-24 w-[100%] ease-in-out duration-500 bg-black' : 'fixed left-[-100%]'}> 
                 <ul className=' pt-1 uppercase '> 
                   <ItemMenu handleCloseNav={handleCloseNav}  nombre="Soluciones" referencia="#solutions"  /> 
                   <ItemMenu handleCloseNav={handleCloseNav}  nombre="Apps" referencia="#solutions1" /> 

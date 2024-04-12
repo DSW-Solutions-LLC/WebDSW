@@ -24,8 +24,8 @@ function ContactUs() {
                                     <div className="col-12 text-center text-2xl">
                                         <p>Nuestro crecimiento exponencial ya empezó. <br/> Unite a la experiencia DSW Solutions.</p>
                                     </div>
-                                    <div className="col-12 text-center text-2xl">
-                                        <p>DSW Solutions - Buenos Aires - Argentina &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div className="col-12 text-center text-lg">
+                                        <p>DSW Solutions - Buenos Aires - Argentina <br/>
                                             <a className="mail-text" href="mailto:info@dswsolutions.com.ar">                                                 
                                                 info@dswsolutions.com.ar
                                             </a>

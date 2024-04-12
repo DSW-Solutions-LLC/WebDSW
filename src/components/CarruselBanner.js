@@ -19,7 +19,7 @@ class CarouselBanners extends React.Component {
        };
   
       return (
-        <div className='mt-38 md:mt-28 '>
+        <div className='mt-3 md:mt-28 '>
             
             <Slider   {...settings}>       
                 <div className="carousel-item ">
