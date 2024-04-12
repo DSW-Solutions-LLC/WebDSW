@@ -6,15 +6,12 @@ import Solutions from './components/Solutions';
 import ContactUs from './components/ContactUs';
 
  
-
-
-
 function App() {
   return (
     <div >
-      <div className="border-gradient"></div>
-      <Header />  
-      <CarouselBanners />        
+     
+      <Header className="z-0" />  
+      <CarouselBanners  />        
       <Solutions />
       <ContactUs />      
     </div>
@@ -22,3 +19,5 @@ function App() {
 }
 
 export default App;
+
+

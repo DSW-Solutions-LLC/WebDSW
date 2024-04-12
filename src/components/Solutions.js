@@ -9,8 +9,8 @@ import ItemSolutions from './ItemSolutions';
 function Solutions() {
  
   return ( 
-    <section id='solutions' className="services pt-5 pb-3">
-         <div className="row">
+    <section id='solutions' className="services pt-5 pb-3 ">
+         <div className="mt-28">
            <div className="col-12 text-center">
                 <p className="text-title bold">Soluciones</p>
             </div>

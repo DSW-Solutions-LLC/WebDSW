@@ -2,7 +2,7 @@
 
 import React  from 'react'; 
 
-function ItemMenu({ nombre, referencia }) {
+function ItemMenu({ nombre, referencia, handleCloseNav }) {
 
   const scrollToSection = (event, ref) => {
     event.preventDefault();
@@ -11,15 +11,14 @@ function ItemMenu({ nombre, referencia }) {
       targetElement.scrollIntoView({
         behavior: 'smooth'
       });
+      handleCloseNav();
     }
   };
 
   return (
-    // <li className='nav-item'>
-    //   <a className='nav-link no-underline' href='/#' >{nombre}</a> 
-    // </li>
-    <li className='nav-item'>
-    <a className='nav-link no-underline' href='/#' onClick={(e) => scrollToSection(e, referencia)}>{nombre}</a> 
+    
+    <li className='p-4' >
+    <a className='text-white' href='/#' onClick={(e) => scrollToSection(e, referencia)}>{nombre}</a> 
   </li>
   );
 }

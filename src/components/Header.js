@@ -1,54 +1,53 @@
  
-//import React, { useState, useEffect } from 'react';
-import React, { useState  } from 'react';
-import '../styles/Header.css'
+ import React, { useState  } from 'react';
+//import '../styles/Header.css'
 import ItemMenu from './ItemMenu'
 import Logo from './LogoHeader'; 
-import ButtonMenu from './ButtonMenu'; 
+//import ButtonMenu from './ButtonMenu'; 
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
  
 
 
 function Header() {
-   const [menuVisible, setMenuVisible] = useState(false);
+  const [nav, setNav] = useState(false);
   // const [isScrolled, setIsScrolled] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuVisible(!menuVisible);
+  const handleNav = () => {
+    setNav(!nav);
   };
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  //     if (scrollTop > 0) {
-  //       setIsScrolled(true);
-  //     } else {
-  //       setIsScrolled(false);
-  //     }
-  //   };
+  const handleCloseNav = () => {
+    setNav(!nav);
+  };
 
-  //   window.addEventListener('scroll', handleScroll);
 
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
 
   return ( 
-    <header className="" >
- 
-      <nav className="navbar navbar-expand-lg navbar-dark">        
+    <header className='bg-black fixed  top-0 w-full z-50' >
+        
+        {/* <ButtonMenu toggleMenu={toggleMenu} /> */}
+        <div className="border-gradient"></div>
+        <div className='flex justify-between items-center h-28 md:h-32 max-w-[1240px] mx-auto px-4' id="navbarHeader">
         <Logo />
-        <ButtonMenu toggleMenu={toggleMenu} />
-
-        <div className="navbar-collapse" id="navbarHeader">
-              <ul className="navbar-nav ml-auto my-2 my-lg-0"> 
-                <ItemMenu nombre="Soluciones" referencia="#solutions" /> 
-                <ItemMenu nombre="Apps" referencia="#solutions1" /> 
-                <ItemMenu nombre="Proyectos" referencia="#solutions2" /> 
-                <ItemMenu nombre="Contactanos" referencia="#contactus" />  
+              <ul className='hidden md:flex'> 
+                <ItemMenu handleCloseNav={()=>{}} nombre="Soluciones" referencia="#solutions" /> 
+                <ItemMenu handleCloseNav={()=>{}} nombre="Apps" referencia="#solutions1" /> 
+                <ItemMenu handleCloseNav={()=>{}} nombre="Proyectos" referencia="#solutions2" /> 
+                <ItemMenu handleCloseNav={()=>{}} nombre="Contactanos" referencia="#contactus" />  
               </ul>
-        </div>
-      </nav>    
+              <div onClick={handleNav} className='block md:hidden' >
+                { !nav ? <AiOutlineClose size={30} color='white' /> :
+                <AiOutlineMenu size={30} color='white' /> }
+              </div> 
+              <div className={!nav ? 'fixed z-50 left-0 top-24 w-[100%] ease-in-out duration-500 bg-black' : 'fixed left-[-100%]'}> 
+                <ul className=' pt-1 uppercase '> 
+                  <ItemMenu handleCloseNav={handleCloseNav}  nombre="Soluciones" referencia="#solutions"  /> 
+                  <ItemMenu handleCloseNav={handleCloseNav}  nombre="Apps" referencia="#solutions1" /> 
+                  <ItemMenu handleCloseNav={handleCloseNav}  nombre="Proyectos" referencia="#solutions2" /> 
+                  <ItemMenu handleCloseNav={handleCloseNav}  nombre="Contactanos" referencia="#contactus" />  
+                </ul>
+              </div> 
+        </div> 
     </header>
   );
 }
