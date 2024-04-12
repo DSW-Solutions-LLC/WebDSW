@@ -1,6 +1,7 @@
   
 import React from 'react';
-import '../styles/Solutions.css' 
+import '../styles/Solutions.css'  
+import mobile from '../images/mobile3.png';
 import ItemSolutions from './ItemSolutions';
  
 
@@ -31,7 +32,8 @@ function Solutions() {
 
             <ItemSolutions 
                 title = "Aplicaciones Mobile" 
-                img= "https://www.thesandbox.com.ar/assets/images/services/digital-transformation.webp" 
+            //    img= "https://www.thesandbox.com.ar/assets/images/services/digital-transformation.webp" 
+                img= {mobile} 
                 text="Generamos productos digitales co-creados con tu equipo."
                 arrayText={[ 
                     "Micrositios",

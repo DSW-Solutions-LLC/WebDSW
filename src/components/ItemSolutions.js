@@ -11,7 +11,7 @@ function ItemSolutions({title, img, text, arrayText }) {
                     <div className="card-body text-center">
                         <h5 className="card-title bold">{title}</h5>
                         <p className="card-text">{text}</p>
-                        <img src= {img} alt={title} />
+                        <img src= {img} alt={title}  />
 
                         {arrayText && arrayText.length > 0 ? (
                         arrayText.slice(1).map((text, index) => (
