@@ -1,0 +1,21 @@
+.apps-section {
+  background-color: black;
+  color: white;
+  scroll-margin-top: 8rem; /* permite que el scroll con el menú deje visible el título */
+}
+
+.app-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 159, 227, 0.2);
+}
+
+/* Responsive fixes */
+@media (max-width: 640px) {
+  .apps-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

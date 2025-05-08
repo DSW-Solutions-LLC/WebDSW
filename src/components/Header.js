@@ -31,8 +31,8 @@ function Header() {
         <Logo />
               <ul className='hidden md:flex'> 
                 <ItemMenu handleCloseNav={()=>{}} nombre="Soluciones" referencia="#solutions" /> 
-                <ItemMenu handleCloseNav={()=>{}} nombre="Apps" referencia="#solutions1" /> 
-                <ItemMenu handleCloseNav={()=>{}} nombre="Proyectos" referencia="#solutions2" /> 
+                <ItemMenu handleCloseNav={()=>{}} nombre="Apps" referencia="#apps" /> 
+                <ItemMenu handleCloseNav={()=>{}} nombre="Proyectos" referencia="#projects" /> 
                 <ItemMenu handleCloseNav={()=>{}} nombre="Contactanos" referencia="#contactus" />  
               </ul>
               <div onClick={handleNav} className='block md:hidden' >
@@ -42,8 +42,8 @@ function Header() {
               <div className={nav ? 'fixed z-50 left-0 top-24 w-[100%] ease-in-out duration-500 bg-black' : 'fixed left-[-100%]'}> 
                 <ul className=' pt-1 uppercase '> 
                   <ItemMenu handleCloseNav={handleCloseNav}  nombre="Soluciones" referencia="#solutions"  /> 
-                  <ItemMenu handleCloseNav={handleCloseNav}  nombre="Apps" referencia="#solutions1" /> 
-                  <ItemMenu handleCloseNav={handleCloseNav}  nombre="Proyectos" referencia="#solutions2" /> 
+                  <ItemMenu handleCloseNav={handleCloseNav}  nombre="Apps" referencia="#apps" /> 
+                  <ItemMenu handleCloseNav={handleCloseNav}  nombre="Proyectos" referencia="#projects" /> 
                   <ItemMenu handleCloseNav={handleCloseNav}  nombre="Contactanos" referencia="#contactus" />  
                 </ul>
               </div> 
