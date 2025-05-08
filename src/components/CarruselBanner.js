@@ -3,6 +3,25 @@ import Slider from 'react-slick';
 import '../styles/CarruselBanner.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+
+function NextArrow(props) {
+  const { onClick } = props;
+  return (
+    <div className="arrow next" onClick={onClick}>
+      <FiChevronRight size={30} />
+    </div>
+  );
+}
+
+function PrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <div className="arrow prev" onClick={onClick}>
+      <FiChevronLeft size={30} />
+    </div>
+  );
+}
 
 class CarouselBanners extends React.Component {
   render() {
@@ -16,6 +35,9 @@ class CarouselBanners extends React.Component {
       autoplaySpeed: 3000,
       cssEase: 'ease-in-out',
       fade: true,
+      arrows: true,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />,
     };
 
     return (

@@ -60,6 +60,31 @@
     transform: translateY(-2px);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
   }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .arrow:hover {
+    background-color: rgba(0, 159, 227, 0.8);
+  }
+  
+  .arrow.next {
+    right: 20px;
+  }
+  
+  .arrow.prev {
+    left: 20px;
+  }
   
   @media screen and (max-width: 768px) {
     .carousel-item-modern {
@@ -86,4 +111,5 @@
       padding: 10px 20px;
     }
   }
+  
   
