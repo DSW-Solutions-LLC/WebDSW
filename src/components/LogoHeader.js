@@ -12,11 +12,7 @@ function LogoHeader() {
 
   return (
     <div onClick={handleClick} className="cursor-pointer inline-block">
-      <img
-        src={logoDSW}
-        alt="Logo"
-        className="size-36 md:size-40 xl:size-52"
-      />
+      <img src={logoDSW} alt="Logo" className="size-36 md:size-40 xl:size-52" />
     </div>
   );
 }

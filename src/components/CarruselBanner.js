@@ -45,31 +45,31 @@ class CarouselBanners extends React.Component {
         <Slider {...settings}>
           {[
             {
-              text1: "Necesitas desarrollar tu App",
-              text2: "¿dónde lo hacen?",
-              button: "Contactanos",
-              link: "/communities.html",
-              img: "https://www.thesandbox.com.ar/assets/images/banners/banner-slider-04.webp"
+              text1: 'Necesitas desarrollar tu App',
+              text2: '¿dónde lo hacen?',
+              button: 'Contactanos',
+              link: '/communities.html',
+              img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-04.webp',
             },
             {
-              text1: "DSW Solutions",
-              text2: "suma valor a tus proyectos",
-              img: "https://www.thesandbox.com.ar/assets/images/banners/banner-slider-05.webp"
+              text1: 'DSW Solutions',
+              text2: 'suma valor a tus proyectos',
+              img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-05.webp',
             },
             {
-              text1: "Un proyecto exitoso",
-              text2: "comienza con una charla.",
-              button: "Contactanos",
-              link: "/communities.html",
-              img: "https://www.thesandbox.com.ar/assets/images/banners/banner-slider-06.webp"
+              text1: 'Un proyecto exitoso',
+              text2: 'comienza con una charla.',
+              button: 'Contactanos',
+              link: '/communities.html',
+              img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-06.webp',
             },
             {
-              text1: "Conocé algunas de",
-              text2: "nuestras últimas creaciones",
-              button: "Proyectos",
-              link: "/communities.html",
-              img: "https://www.thesandbox.com.ar/assets/images/banners/banner-slider-05.webp"
-            }
+              text1: 'Conocé algunas de',
+              text2: 'nuestras últimas creaciones',
+              button: 'Proyectos',
+              link: '/communities.html',
+              img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-05.webp',
+            },
           ].map((item, i) => (
             <div key={i} className="carousel-item-modern">
               <img src={item.img} alt={`Banner ${i}`} className="carousel-img" />

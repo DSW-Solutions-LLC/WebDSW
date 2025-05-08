@@ -14,11 +14,11 @@ function Solutions() {
           img="https://jaemsolucionesinformaticas.com/wp-content/uploads/2024/05/Sistemas-y-Redes.webp"
           text="Generamos productos digitales co-creados con tu equipo."
           arrayText={[
-            "Micrositios",
-            "Apps",
-            "Landing pages para campañas",
-            "Páginas web institucionales",
-            "Portales de contenido",
+            'Micrositios',
+            'Apps',
+            'Landing pages para campañas',
+            'Páginas web institucionales',
+            'Portales de contenido',
           ]}
         />
 
@@ -27,11 +27,11 @@ function Solutions() {
           img="https://www.siadv.com/wp-content/uploads/2019/07/mejores-soluciones-informaticas.jpg"
           text="Generamos productos digitales co-creados con tu equipo."
           arrayText={[
-            "Micrositios",
-            "Apps",
-            "Landing pages para campañas",
-            "Páginas web institucionales",
-            "Portales de contenido",
+            'Micrositios',
+            'Apps',
+            'Landing pages para campañas',
+            'Páginas web institucionales',
+            'Portales de contenido',
           ]}
         />
 
@@ -40,11 +40,11 @@ function Solutions() {
           img="https://www.easyappcode.com/images/page-soluciones-informaticos-para-empresas.jpg"
           text="Generamos productos digitales co-creados con tu equipo."
           arrayText={[
-            "Micrositios",
-            "Apps",
-            "Landing pages para campañas",
-            "Páginas web institucionales",
-            "Portales de contenido",
+            'Micrositios',
+            'Apps',
+            'Landing pages para campañas',
+            'Páginas web institucionales',
+            'Portales de contenido',
           ]}
         />
 
@@ -53,11 +53,11 @@ function Solutions() {
           img="https://www.inter-fax.net/wp-content/uploads/2022/03/infor3.png"
           text="Generamos productos digitales co-creados con tu equipo."
           arrayText={[
-            "Micrositios",
-            "Apps",
-            "Landing pages para campañas",
-            "Páginas web institucionales",
-            "Portales de contenido",
+            'Micrositios',
+            'Apps',
+            'Landing pages para campañas',
+            'Páginas web institucionales',
+            'Portales de contenido',
           ]}
         />
       </div>

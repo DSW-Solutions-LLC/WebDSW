@@ -5,24 +5,24 @@ import { motion } from 'framer-motion';
 function Apps() {
   const apps = [
     {
-      title: "App de Reservas",
-      img: "https://s3.us-east-2.amazonaws.com/mgpanel/403-representaciones-experiencia-usuario-diseno-interfaz.jpg",
-      text: "Sistema para gestionar reservas y disponibilidad en tiempo real.",
+      title: 'App de Reservas',
+      img: 'https://s3.us-east-2.amazonaws.com/mgpanel/403-representaciones-experiencia-usuario-diseno-interfaz.jpg',
+      text: 'Sistema para gestionar reservas y disponibilidad en tiempo real.',
     },
     {
-      title: "App de Fitness",
-      img: "https://img.freepik.com/vector-gratis/banner-desarrollo-aplicaciones_33099-1720.jpg?semt=ais_hybrid&w=740",
-      text: "Aplicación de rutinas, seguimiento de progreso y desafíos.",
+      title: 'App de Fitness',
+      img: 'https://img.freepik.com/vector-gratis/banner-desarrollo-aplicaciones_33099-1720.jpg?semt=ais_hybrid&w=740',
+      text: 'Aplicación de rutinas, seguimiento de progreso y desafíos.',
     },
     {
-      title: "App de Clima",
-      img: "https://img.freepik.com/foto-gratis/representaciones-experiencia-usuario-diseno-interfaz_23-2150104509.jpg?ga=GA1.1.169197955.1746740375&semt=ais_hybrid&w=740",
-      text: "Consulta del clima actual y pronóstico extendido con geolocalización.",
+      title: 'App de Clima',
+      img: 'https://img.freepik.com/foto-gratis/representaciones-experiencia-usuario-diseno-interfaz_23-2150104509.jpg?ga=GA1.1.169197955.1746740375&semt=ais_hybrid&w=740',
+      text: 'Consulta del clima actual y pronóstico extendido con geolocalización.',
     },
     {
-      title: "App de Recetas",
-      img: "https://img.freepik.com/fotos-premium/concepto-gestion-documentos-iconos-pantalla-virtual-sistema-gestion-documentacion-dms-documento-linea_154034-553.jpg?ga=GA1.1.169197955.1746740375&semt=ais_hybrid&w=740",
-      text: "Encuentra y comparte recetas con pasos guiados y videos.",
+      title: 'App de Recetas',
+      img: 'https://img.freepik.com/fotos-premium/concepto-gestion-documentos-iconos-pantalla-virtual-sistema-gestion-documentacion-dms-documento-linea_154034-553.jpg?ga=GA1.1.169197955.1746740375&semt=ais_hybrid&w=740',
+      text: 'Encuentra y comparte recetas con pasos guiados y videos.',
     },
   ];
 
@@ -49,11 +49,7 @@ function Apps() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img
-              src={app.img}
-              alt={app.title}
-              className="w-full h-48 object-cover"
-            />
+            <img src={app.img} alt={app.title} className="w-full h-48 object-cover" />
             <div className="p-4 text-center text-white">
               <h3 className="text-xl font-semibold mb-2">{app.title}</h3>
               <p className="text-sm text-zinc-300">{app.text}</p>
