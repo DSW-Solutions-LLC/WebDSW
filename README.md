@@ -51,18 +51,29 @@ npm run dev
 ## 📁 Estructura del proyecto
 
 ```
-WebDSW/
-├── public/                   # Archivos públicos (favicon, imágenes estáticas)
-├── src/
-│   ├── assets/               # Íconos, logos, imágenes no dinámicas
-│   ├── components/           # Componentes reutilizables (Header, Logo, Carrusel, etc.)
-│   ├── pages/                # Secciones completas como Apps, Projects, ContactUs
-│   ├── styles/               # Estilos CSS separados por página
-│   ├── App.jsx               # Componente raíz con las secciones
-│   └── main.jsx              # Entrada principal para React
-├── package.json
-├── tailwind.config.js
-└── README.md
+WEBDSW/
+├── build/ # Archivos generados al compilar
+├── node_modules/ # Dependencias del proyecto
+├── public/ # Archivos públicos (index.html, favicon, etc)
+├── src/ # Código fuente principal
+│ ├── components/ # Componentes reutilizables (Header, Footer, etc.)
+│ ├── icono/ # Íconos personalizados o SVGs
+│ ├── images/ # Imágenes del sitio
+│ ├── styles/ # Archivos CSS organizados
+│ ├── App.css # Estilos globales de la App
+│ ├── App.js # Componente principal
+│ ├── App.test.js # Test inicial de React
+│ ├── index.css # Estilos base importados en index.js
+│ ├── index.js # Entrada de React DOM
+│ ├── logo.svg # Logo usado por defecto
+│ ├── reportWebVitals.js # Métricas de rendimiento
+│ └── setupTests.js # Setup para tests
+├── .gitignore # Archivos y carpetas ignorados por git
+├── .nvmrc # Versión de Node recomendada
+├── .prettierrc # Configuración de Prettier
+├── package.json # Dependencias y scripts del proyecto
+├── tailwind.config.js # Configuración de TailwindCSS
+└── README.md # Este archivo
 ```
 
 ---
