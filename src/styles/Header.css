@@ -27,7 +27,6 @@
   background-color: black !important;
 }
 
-
 .navbar-nav {
   display: -ms-flexbox;
   display: flex;
@@ -39,7 +38,7 @@
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .mb-2,
@@ -52,8 +51,6 @@
   margin-left: auto !important;
 }
 
-
-
 .navbar-collapse {
   display: none !important;
 }
@@ -62,7 +59,6 @@
   margin-right: 48px;
   font-size: 24px;
 }
-
 
 @media (min-width: 675px) {
   .nav-item {

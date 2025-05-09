@@ -1,163 +1,135 @@
 .services {
-    width: 100%;
-    background-color: black;
-    padding: 0px 7%;
-}
-
-/* 
-.services .card {
-    border: 0px !important;
-    border-radius: 0px !important;
-    height: 535px;
-    height: 470px;
-    background-color: none;
-} */
-
-.services .card .card-cover .card-title {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 70px;
+  width: 100%;
+  background-color: black;
+  padding: 0 7%;
+  font-family: 'Figtree', sans-serif;
 }
 
 .services .text-title {
-    color: white;
-    font-size: 36px;
-    margin-bottom: 70px;
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.1);
 }
 
-
-
-/* .card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 1.25rem;
-} */
-
-.card-title {
-    margin-bottom: 0.75rem;
+.services .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.05); /* sutil borde */
+  border-radius: 16px;
+  background-color: #121212;
+  overflow: hidden;
+  min-height: 500px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.03), 0 8px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 }
 
-.services .card:hover .card-cover {
-    transform: translateY(100%);
-    opacity: 0;
-}
-
-.services .card:hover .card-body {
-    opacity: 1;
-}
-
-.card {
-    border: 0px !important;
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, .125);
-    border-radius: 0.25rem;
+.services .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(0, 100, 200, 0.2);
 }
 
 .card-cover {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    /* padding-top: 50px; */
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: black;
-    opacity: 1;
-    transition: all 0.6s ease-in-out;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: all 0.6s ease-in-out;
+  pointer-events: none;
 }
 
-/* .card-body {
-    opacity: 1;
-    transition: all 0.6s ease-in-out;
-} */
+.services .card:hover .card-cover {
+  transform: translateY(-100%);
+  opacity: 0;
+  box-shadow: 0 10px 25px rgba(0, 159, 227, 0.2);
+}
+
+.card-body {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  transition: all 0.6s ease-in-out;
+  color: white;
+}
+
+.services .card:hover .card-body {
+  opacity: 1;
+  max-height: 500px;
+  padding: 1.5rem;
+}
 
 .services .card .card-body .card-title {
-    margin-bottom: 25px;
-    font-size: 33px;
-    font-size: 24px;
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
+.services .card .card-body p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+}
 
 .services .card img {
-    height: 150px;
-    width: 150px;
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.services .card:hover img {
+  transform: scale(1.05);
 }
 
 .bold {
-    font-family: 'lato', 'bold';
+  font-weight: 600;
 }
 
 .pb-3,
 .py-3 {
-    padding-bottom: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 
 .pt-5,
 .py-5 {
-    padding-top: 1rem !important;
+  padding-top: 1rem !important;
 }
 
 .pb-5,
 .py-5 {
-    padding-bottom: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 
 .row {
-    margin: 0px !important;
+  margin: 0 !important;
 }
 
 .text-center {
-    text-align: center !important;
+  text-align: center !important;
 }
-
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-
 
 .border-gradient-services {
-    height: 4px;
-    width: 100%;
-    background: rgb(0, 159, 227);
-    background: linear-gradient(90deg, rgba(0, 159, 227, 1) 0%, rgba(187, 33, 191, 1) 100%);
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(0, 159, 227, 1) 0%, rgba(187, 33, 191, 1) 100%);
 }
 
-
-/* .services .card {
-    border: 0px !important;
-    border-radius: 0px !important;
-    height: 535px;
-    height: 470px;
-    background-color: none;
-} */
-
-
-
-.col-12 {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
+.col-12,
 .col,
 .col-1,
-.col-10,
-.col-11,
-.col-12,
 .col-2,
 .col-3,
 .col-4,
@@ -166,40 +138,14 @@ p {
 .col-7,
 .col-8,
 .col-9,
+.col-10,
+.col-11,
 .col-auto,
-.col-lg,
-.col-lg-1,
-.col-lg-10,
-.col-lg-11,
-.col-lg-12,
-.col-lg-2,
-.col-lg-3,
-.col-lg-4,
-.col-lg-5,
-.col-lg-6,
-.col-lg-7,
-.col-lg-8,
-.col-lg-9,
-.col-lg-auto,
-.col-md,
-.col-md-1,
-.col-md-10,
-.col-md-11,
-.col-md-12,
-.col-md-2,
-.col-md-3,
-.col-md-4,
-.col-md-5,
-.col-md-6,
-.col-md-7,
-.col-md-8,
-.col-md-9,
-.col-md-auto,
 .col-sm,
+.col-md,
+.col-lg,
+.col-xl,
 .col-sm-1,
-.col-sm-10,
-.col-sm-11,
-.col-sm-12,
 .col-sm-2,
 .col-sm-3,
 .col-sm-4,
@@ -208,12 +154,34 @@ p {
 .col-sm-7,
 .col-sm-8,
 .col-sm-9,
-.col-sm-auto,
-.col-xl,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
 .col-xl-1,
-.col-xl-10,
-.col-xl-11,
-.col-xl-12,
 .col-xl-2,
 .col-xl-3,
 .col-xl-4,
@@ -222,17 +190,19 @@ p {
 .col-xl-7,
 .col-xl-8,
 .col-xl-9,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
 .col-xl-auto {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 @media (min-width: 1200px) {
-    .col-xl-3 {
-        -ms-flex: 0 0 25%;
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
+  .col-xl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
 }

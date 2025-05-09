@@ -1,75 +1,144 @@
-# Getting Started with Create React App
+# 🌐 WebDSW – Sitio oficial de DSW Solutions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bienvenido al repositorio del sitio web de **DSW Solutions**, una empresa de tecnología que impulsa la transformación digital a través de soluciones de software personalizadas, modernas y escalables.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🧹 Sobre el proyecto
 
-### `npm run deploy`
+Este sitio está diseñado como una landing page moderna y profesional que refleja la identidad y capacidades de DSW Solutions. Cuenta con navegación fluida, diseño responsive, animaciones sutiles y un enfoque visual enfocado en captar la atención de nuevos clientes y talento tecnológico.
 
-Corre la publicacion en github
+---
 
+## 🚀 Tecnologías utilizadas
 
-### `npm start`
+| Tecnología                | Descripción                                       |
+| ------------------------- | ------------------------------------------------- |
+| **React**                 | Framework principal para construir la UI          |
+| **Tailwind CSS**          | Sistema de diseño y utilidades CSS modernas       |
+| **Framer Motion**         | Librería de animaciones fluidas y performantes    |
+| **React Slick**           | Carrusel responsivo para banners dinámicos        |
+| **CSS Modules**           | Estilizado por secciones con separación de lógica |
+| **GitHub Pages** / Vercel | Hosting y despliegue continuo del sitio           |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Instalación local
 
-### `npm test`
+1. **Clonar el repositorio**:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/DSW-Solutions-LLC/WebDSW.git
+cd WebDSW
+```
 
-### `npm run build`
+2. **Instalar dependencias**:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Iniciar el proyecto en modo desarrollo**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run dev
+```
 
-### `npm run eject`
+> Asegurate de tener instalado **Node.js v18+** y **npm**.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📁 Estructura del proyecto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+WEBDSW/
+├── build/ # Archivos generados al compilar
+├── node_modules/ # Dependencias del proyecto
+├── public/ # Archivos públicos (index.html, favicon, etc)
+├── src/ # Código fuente principal
+│ ├── components/ # Componentes reutilizables (Header, Footer, etc.)
+│ ├── icono/ # Íconos personalizados o SVGs
+│ ├── images/ # Imágenes del sitio
+│ ├── styles/ # Archivos CSS organizados
+│ ├── App.css # Estilos globales de la App
+│ ├── App.js # Componente principal
+│ ├── App.test.js # Test inicial de React
+│ ├── index.css # Estilos base importados en index.js
+│ ├── index.js # Entrada de React DOM
+│ ├── logo.svg # Logo usado por defecto
+│ ├── reportWebVitals.js # Métricas de rendimiento
+│ └── setupTests.js # Setup para tests
+├── .gitignore # Archivos y carpetas ignorados por git
+├── .nvmrc # Versión de Node recomendada
+├── .prettierrc # Configuración de Prettier
+├── package.json # Dependencias y scripts del proyecto
+├── tailwind.config.js # Configuración de TailwindCSS
+└── README.md # Este archivo
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🛍 Navegación y secciones
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `/#solutions` → Sección de **Soluciones**
+- `/#apps` → Presentación de nuestras **Apps**
+- `/#projects` → Portafolio de **Proyectos**
+- `/#contactus` → Datos de contacto y llamada a la acción
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Cada sección está optimizada con `scroll-margin` para que el header no tape los títulos al navegar.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🎨 Diseño y experiencia
 
-### Analyzing the Bundle Size
+- ✨ Transiciones suaves al hacer scroll
+- 📱 Adaptado a pantallas móviles, tablets y desktops
+- 🎮 Animaciones que aparecen al hacer scroll (con `framer-motion`)
+- 🗒️ Menú colapsable en móviles con íconos accesibles (`react-icons`)
+- 📸 Banners atractivos con imágenes dinámicas y llamadas a la acción
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🧑‍💻 Buenas prácticas implementadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Código modular y reutilizable
+- Separación clara entre lógica, estilo y contenido
+- Scroll anchor corregido para que el `Header` no tape secciones
+- Animaciones no invasivas con `framer-motion`
+- Tipografía y diseño elegidos para máxima legibilidad en fondo oscuro
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🛠 Contribución
 
-### Deployment
+¿Querés colaborar con el proyecto?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Hacé un fork del repo
+2. Creá tu rama: `git checkout -b feature/nueva-feature`
+3. Subí tus cambios: `git commit -am 'Agrega nueva feature'`
+4. Push: `git push origin feature/nueva-feature`
+5. Abrí un Pull Request 🚀
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🧑‍💼 Autor y contacto
+
+**DSW Solutions**
+📍 Buenos Aires, Argentina
+📧 [info@dswsolutions.com.ar](mailto:info@dswsolutions.com.ar)
+🌐 [https://www.dswsolutions.com.ar](https://www.dswsolutions.com.ar)
+
+---
+
+## 📝 Licencia
+
+Este repositorio es propiedad privada de **DSW Solutions SRL**. Su uso, distribución o modificación requiere autorización expresa.
+
+---
+
+## 💡 Próximas mejoras
+
+- Integración de formularios con backend (Node/Express o Formspree)
+- Página de blog o novedades
+- Animaciones más avanzadas por sección
+- Soporte multilenguaje
