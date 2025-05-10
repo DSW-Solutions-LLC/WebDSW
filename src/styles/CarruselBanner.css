@@ -130,11 +130,12 @@
 .slick-dots-custom li.slick-active button {
   transform: scale(1.2);
   box-shadow: 0 0 12px rgba(0, 191, 255, 0.6), inset 0 0 4px rgba(0, 191, 255, 0.5);
-  background: linear-gradient(135deg, #00bfff, #8a2be2); /* nuevo fondo azul-violeta */
+  background: linear-gradient(135deg, #00bfff, #8a2be2);
   border: none;
 }
 
 .slick-dots-custom li.slick-active button::before {
+  background: linear-gradient(135deg, #00bfff, #8a2be2);
   opacity: 1;
   transform: scale(1.2);
 }
