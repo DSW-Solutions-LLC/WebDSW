@@ -83,58 +83,60 @@
 }
 
 /* ===================== */
-/* DOTS PERSONALIZADOS */
+/* DOTS MODERNOS Y VISUALES */
 /* ===================== */
 
 .slick-dots-custom {
   position: absolute;
-  bottom: -30px; /* Espacio debajo del carrusel */
+  bottom: -30px;
   width: 100%;
   display: flex !important;
   justify-content: center;
   align-items: center;
   z-index: 10;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  gap: 10px;
 }
 
 .slick-dots-custom li {
-  margin: 0 6px;
+  margin: 0;
 }
 
 .slick-dots-custom li button {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: transparent;
-  border: none;
+  border: 2px solid #00bfff;
   padding: 0;
   cursor: pointer;
   position: relative;
+  transition: all 0.3s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
+  box-shadow: inset 0 0 0 2px rgba(0, 191, 255, 0.3);
 }
 
 .slick-dots-custom li button::before {
   content: '';
-  display: block;
-  width: 10px;
-  height: 10px;
-  background: #555;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  transition: all 0.3s ease;
+  background: #00bfff;
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+}
+
+.slick-dots-custom li.slick-active button {
+  transform: scale(1.2);
+  box-shadow: 0 0 12px rgba(0, 191, 255, 0.6), inset 0 0 4px rgba(0, 191, 255, 0.5);
+  background: linear-gradient(135deg, #00bfff, #8a2be2); /* nuevo fondo azul-violeta */
+  border: none;
 }
 
 .slick-dots-custom li.slick-active button::before {
-  background: #00bfff;
-  transform: scale(1.4);
-}
-
-.slick-dots-custom li button:hover::before {
-  box-shadow: 0 0 8px rgba(0, 191, 255, 0.6);
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 /* ===================== */
