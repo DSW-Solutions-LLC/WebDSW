@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/WebDSW/static/css/main.164db952.css",
-    "main.js": "/WebDSW/static/js/main.c7635822.js",
+    "main.css": "/WebDSW/static/css/main.4f027dad.css",
+    "main.js": "/WebDSW/static/js/main.1d91c751.js",
     "static/js/453.2d6f2e9e.chunk.js": "/WebDSW/static/js/453.2d6f2e9e.chunk.js",
     "static/media/DSW2.png": "/WebDSW/static/media/DSW2.81555b024cfdcb8afbcb.png",
     "static/media/slick.svg": "/WebDSW/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -9,12 +9,12 @@
     "static/media/slick.ttf": "/WebDSW/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/WebDSW/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/WebDSW/index.html",
-    "main.164db952.css.map": "/WebDSW/static/css/main.164db952.css.map",
-    "main.c7635822.js.map": "/WebDSW/static/js/main.c7635822.js.map",
+    "main.4f027dad.css.map": "/WebDSW/static/css/main.4f027dad.css.map",
+    "main.1d91c751.js.map": "/WebDSW/static/js/main.1d91c751.js.map",
     "453.2d6f2e9e.chunk.js.map": "/WebDSW/static/js/453.2d6f2e9e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.164db952.css",
-    "static/js/main.c7635822.js"
+    "static/css/main.4f027dad.css",
+    "static/js/main.1d91c751.js"
   ]
 }
