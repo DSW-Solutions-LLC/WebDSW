@@ -1,5 +1,3 @@
-// ItemMenu.js
-
 import React from 'react';
 
 function ItemMenu({ nombre, referencia, handleCloseNav }) {
@@ -15,9 +13,14 @@ function ItemMenu({ nombre, referencia, handleCloseNav }) {
   };
 
   return (
-    <li className="p-4">
-      <a className="text-white" href="/#" onClick={(e) => scrollToSection(e, referencia)}>
+    <li className="p-2 group cursor-pointer transition-all duration-300">
+      <a
+        className="relative inline-block text-white text-lg font-medium transition-all duration-300 group-hover:scale-105"
+        href="/#"
+        onClick={(e) => scrollToSection(e, referencia)}
+      >
         {nombre}
+        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-blue-800 to-purple-700 transition-all duration-500 group-hover:w-full" />
       </a>
     </li>
   );
