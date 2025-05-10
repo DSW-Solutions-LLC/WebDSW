@@ -24,6 +24,14 @@ function PrevArrow(props) {
 }
 
 class CarouselBanners extends React.Component {
+  scrollToSection = (e, ref) => {
+    e.preventDefault();
+    const element = document.querySelector(ref);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   render() {
     const settings = {
       dots: false,
@@ -40,44 +48,52 @@ class CarouselBanners extends React.Component {
       prevArrow: <PrevArrow />,
     };
 
+    const slides = [
+      {
+        text1: 'DSW Solutions',
+        text2: 'suma valor a tus proyectos',
+        button: 'Soluciones',
+        link: '#solutions',
+        img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-05.webp',
+      },
+      {
+        text1: 'Necesitas desarrollar tu App',
+        text2: '¿de qué tipo?',
+        button: 'Aplicaciones',
+        link: '#apps',
+        img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-04.webp',
+      },
+      {
+        text1: 'Conocé algunas de',
+        text2: 'nuestras últimas creaciones',
+        button: 'Proyectos',
+        link: '#projects',
+        img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-05.webp',
+      },
+      {
+        text1: 'Un proyecto exitoso',
+        text2: 'comienza con una charla.',
+        button: 'Contactanos',
+        link: '#contactus',
+        img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-06.webp',
+      },
+    ];
+
     return (
       <div className="carousel-container">
         <Slider {...settings}>
-          {[
-            {
-              text1: 'Necesitas desarrollar tu App',
-              text2: '¿dónde lo hacen?',
-              button: 'Contactanos',
-              link: '/communities.html',
-              img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-04.webp',
-            },
-            {
-              text1: 'DSW Solutions',
-              text2: 'suma valor a tus proyectos',
-              img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-05.webp',
-            },
-            {
-              text1: 'Un proyecto exitoso',
-              text2: 'comienza con una charla.',
-              button: 'Contactanos',
-              link: '/communities.html',
-              img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-06.webp',
-            },
-            {
-              text1: 'Conocé algunas de',
-              text2: 'nuestras últimas creaciones',
-              button: 'Proyectos',
-              link: '/communities.html',
-              img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-05.webp',
-            },
-          ].map((item, i) => (
+          {slides.map((item, i) => (
             <div key={i} className="carousel-item-modern">
               <img src={item.img} alt={`Banner ${i}`} className="carousel-img" />
               <div className="overlay-text">
                 <p className="slide-text">{item.text1}</p>
                 <p className="slide-text bold">{item.text2}</p>
                 {item.button && (
-                  <a className="btn-modern" href={item.link}>
+                  <a
+                    className="btn-modern"
+                    href={item.link}
+                    onClick={(e) => this.scrollToSection(e, item.link)}
+                  >
                     {item.button}
                   </a>
                 )}
