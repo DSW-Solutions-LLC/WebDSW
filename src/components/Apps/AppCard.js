@@ -22,7 +22,7 @@ function AppCard({ app, index }) {
       }`}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <img src={app.img} alt={app.title} className="w-full h-48 object-cover" />
+      <img src={app.img} alt={app.title} className="app-img w-full h-48 object-cover" />
       <div className="p-4 text-center text-white">
         <h3 className="text-xl font-semibold mb-2">{app.title}</h3>
         <p className="text-sm text-zinc-300">{app.text}</p>
