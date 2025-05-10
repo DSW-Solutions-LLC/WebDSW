@@ -1,5 +1,6 @@
 import React from 'react';
-import '../styles/Apps.css';
+import AppCard from './AppCard';
+import '../../styles/Apps.css';
 import { motion } from 'framer-motion';
 
 function Apps() {
@@ -40,21 +41,7 @@ function Apps() {
       </div>
       <div className="flex flex-wrap justify-center gap-6 px-6">
         {apps.map((app, index) => (
-          <motion.div
-            key={index}
-            className="app-card bg-zinc-900 border border-zinc-700 rounded-xl shadow-lg overflow-hidden w-full sm:w-72"
-            whileHover={{ scale: 1.05 }}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            <img src={app.img} alt={app.title} className="w-full h-48 object-cover" />
-            <div className="p-4 text-center text-white">
-              <h3 className="text-xl font-semibold mb-2">{app.title}</h3>
-              <p className="text-sm text-zinc-300">{app.text}</p>
-            </div>
-          </motion.div>
+          <AppCard key={index} app={app} index={index} />
         ))}
       </div>
     </section>

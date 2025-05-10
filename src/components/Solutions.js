@@ -4,7 +4,7 @@ import ItemSolutions from './ItemSolutions';
 
 function Solutions() {
   return (
-    <section id="solutions" className="services scroll-mt-32">
+    <section id="solutions" className="services pt-5 pb-10 scroll-mt-32">
       <div className="solutions-header text-center">
         <h2 className="text-title">Soluciones</h2>
       </div>

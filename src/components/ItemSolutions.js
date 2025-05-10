@@ -1,20 +1,47 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import '../styles/Solutions.css';
 
-function ItemSolutions({ title, text, arrayText, img }) {
+function ItemSolutions({ title, img, text, arrayText }) {
+  const cardRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Solo aplicar la clase si es mobile
+        if (window.innerWidth < 768) {
+          setIsVisible(entry.isIntersecting);
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    if (cardRef.current) observer.observe(cardRef.current);
+
+    return () => {
+      if (cardRef.current) observer.unobserve(cardRef.current);
+    };
+  }, []);
+
   return (
-    <div className="col-xl-3 col-12 py-5 text-center">
+    <div
+      ref={cardRef}
+      className={`col-xl-3 col-md-6 col-12 pb-5 px-2 ${isVisible ? 'mobile-visible' : ''}`}
+    >
       <div className="card">
         <div className="card-cover">
-          <h3 className="card-title">{title}</h3>
-          <img src={img} alt="icono solución" />
+          <img src={img} alt={title} />
         </div>
-
         <div className="card-body">
-          <h4 className="card-title">{title}</h4>
+          <h3 className="card-title">{title}</h3>
           <p>{text}</p>
-          <ul>
-            {arrayText.map((item, index) => (
-              <li key={index}>{item}</li>
+          <ul className="text-left list-disc pl-5 pt-3">
+            {arrayText.map((item, i) => (
+              <li key={i} className="pb-1">
+                {item}
+              </li>
             ))}
           </ul>
         </div>

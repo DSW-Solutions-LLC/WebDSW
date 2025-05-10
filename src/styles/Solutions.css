@@ -206,3 +206,16 @@
     max-width: 25%;
   }
 }
+
+@media (max-width: 767px) {
+  .mobile-visible .card-cover {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  .mobile-visible .card-body {
+    opacity: 1;
+    max-height: 500px;
+    padding: 1.5rem;
+  }
+}

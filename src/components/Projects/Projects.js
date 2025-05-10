@@ -1,5 +1,6 @@
 import React from 'react';
-import '../styles/Projects.css'; // Asegurate que esté importado
+import ProjectCard from './ProjectCard';
+import '../../styles/Projects.css';
 
 function Projects() {
   const projects = [
@@ -26,19 +27,13 @@ function Projects() {
   ];
 
   return (
-    <section id="projects" className="bg-black text-white pt-5 pb-10 scroll-mt-32">
-      <div className="mb-8 text-center">
-        <p className="projects-title">Proyectos</p>
+    <section id="projects" className="projects-section bg-black text-white pt-5 pb-10 scroll-mt-32">
+      <div className="text-center mb-10">
+        <h2 className="projects-title">Proyectos</h2>
       </div>
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <img src={project.img} alt={project.title} className="project-img" />
-            <div className="project-content">
-              <h3 className="project-title">{project.title}</h3>
-              <p className="project-text">{project.text}</p>
-            </div>
-          </div>
+          <ProjectCard key={index} project={project} index={index} />
         ))}
       </div>
     </section>

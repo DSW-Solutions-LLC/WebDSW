@@ -22,7 +22,7 @@ function ContactUs() {
   };
 
   return (
-    <section id="contactus" className="pt-20 pb-20 bg-black text-white scroll-mt-32">
+    <section id="contactus" className="pt-5 pb-10 bg-black text-white scroll-mt-32">
       <div className="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-10">
         {/* Formulario */}
         <div className="w-full lg:w-1/2">
