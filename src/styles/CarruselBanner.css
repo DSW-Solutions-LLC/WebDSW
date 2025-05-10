@@ -1,7 +1,28 @@
 .carousel-container {
   position: relative;
   margin-top: 5rem;
-  overflow: hidden;
+  overflow: visible;
+}
+
+.carousel-container::before,
+.carousel-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 15%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
 }
 
 .carousel-item-modern {
@@ -61,31 +82,64 @@
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.arrow {
+/* ===================== */
+/* DOTS PERSONALIZADOS */
+/* ===================== */
+
+.slick-dots-custom {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 10px;
+  bottom: -30px; /* Espacio debajo del carrusel */
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.slick-dots-custom li {
+  margin: 0 6px;
+}
+
+.slick-dots-custom li button {
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
+  background: transparent;
+  border: none;
+  padding: 0;
   cursor: pointer;
-  color: white;
-  transition: background-color 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
 }
 
-.arrow:hover {
-  background-color: rgba(0, 159, 227, 0.8);
+.slick-dots-custom li button::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #555;
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
-.arrow.next {
-  right: 20px;
+.slick-dots-custom li.slick-active button::before {
+  background: #00bfff;
+  transform: scale(1.4);
 }
 
-.arrow.prev {
-  left: 20px;
+.slick-dots-custom li button:hover::before {
+  box-shadow: 0 0 8px rgba(0, 191, 255, 0.6);
 }
 
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
 @media screen and (max-width: 768px) {
   .carousel-item-modern {
     height: 60vh;
@@ -109,5 +163,9 @@
   .btn-modern {
     font-size: 16px;
     padding: 10px 20px;
+  }
+
+  .slick-dots-custom {
+    bottom: -40px; /* más espacio en mobile */
   }
 }

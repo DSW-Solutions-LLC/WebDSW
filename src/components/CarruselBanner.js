@@ -3,25 +3,6 @@ import Slider from 'react-slick';
 import '../styles/CarruselBanner.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-
-function NextArrow(props) {
-  const { onClick } = props;
-  return (
-    <div className="arrow next" onClick={onClick}>
-      <FiChevronRight size={30} />
-    </div>
-  );
-}
-
-function PrevArrow(props) {
-  const { onClick } = props;
-  return (
-    <div className="arrow prev" onClick={onClick}>
-      <FiChevronLeft size={30} />
-    </div>
-  );
-}
 
 class CarouselBanners extends React.Component {
   scrollToSection = (e, ref) => {
@@ -34,7 +15,8 @@ class CarouselBanners extends React.Component {
 
   render() {
     const settings = {
-      dots: false,
+      dots: true,
+      dotsClass: 'slick-dots slick-dots-custom',
       infinite: true,
       speed: 1000,
       slidesToShow: 1,
@@ -42,10 +24,8 @@ class CarouselBanners extends React.Component {
       autoplay: true,
       autoplaySpeed: 3000,
       cssEase: 'ease-in-out',
-      fade: true,
-      arrows: true,
-      nextArrow: <NextArrow />,
-      prevArrow: <PrevArrow />,
+      fade: false,
+      arrows: false,
     };
 
     const slides = [
@@ -54,28 +34,28 @@ class CarouselBanners extends React.Component {
         text2: 'suma valor a tus proyectos',
         button: 'Soluciones',
         link: '#solutions',
-        img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-05.webp',
+        img: 'https://i.pinimg.com/736x/43/9e/07/439e0745fd00e29a1f6a4d10b41d425e.jpg',
       },
       {
         text1: 'Necesitas desarrollar tu App',
         text2: '¿de qué tipo?',
         button: 'Aplicaciones',
         link: '#apps',
-        img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-04.webp',
+        img: 'https://i.pinimg.com/736x/43/9e/07/439e0745fd00e29a1f6a4d10b41d425e.jpg',
       },
       {
         text1: 'Conocé algunas de',
         text2: 'nuestras últimas creaciones',
         button: 'Proyectos',
         link: '#projects',
-        img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-05.webp',
+        img: 'https://i.pinimg.com/736x/43/9e/07/439e0745fd00e29a1f6a4d10b41d425e.jpg',
       },
       {
         text1: 'Un proyecto exitoso',
         text2: 'comienza con una charla.',
         button: 'Contactanos',
         link: '#contactus',
-        img: 'https://www.thesandbox.com.ar/assets/images/banners/banner-slider-06.webp',
+        img: 'https://i.pinimg.com/736x/43/9e/07/439e0745fd00e29a1f6a4d10b41d425e.jpg',
       },
     ];
 
