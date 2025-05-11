@@ -25,6 +25,7 @@ class CarouselBanners extends React.Component {
       autoplaySpeed: 3000,
       cssEase: 'ease-in-out',
       fade: false,
+      // cambia la forma del carrusel | fade: true
       arrows: false,
     };
 
@@ -65,6 +66,7 @@ class CarouselBanners extends React.Component {
           {slides.map((item, i) => (
             <div key={i} className="carousel-item-modern">
               <img src={item.img} alt={`Banner ${i}`} className="carousel-img" />
+              <div className="fade-overlay"></div>
               <div className="overlay-text">
                 <p className="slide-text">{item.text1}</p>
                 <p className="slide-text bold">{item.text2}</p>
@@ -78,6 +80,11 @@ class CarouselBanners extends React.Component {
                   </a>
                 )}
               </div>
+
+              <div className="gradient-left"></div>
+              <div className="gradient-right"></div>
+              <div className="gradient-top"></div>
+              <div className="gradient-bottom"></div>
             </div>
           ))}
         </Slider>
