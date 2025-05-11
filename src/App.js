@@ -13,7 +13,6 @@ function App() {
     <div>
       <Header className="z-0" />
       <CarouselBanners />
-      <SectionDivider />
       <Solutions />
       <SectionDivider />
       <Apps />
