@@ -1,4 +1,5 @@
 {
+  "homepage": "https://dsw-solutions-llc.github.io/WebDSW",
   "name": "dswwebpage",
   "version": "0.1.0",
   "private": true,
@@ -24,7 +25,9 @@
     "lint:fix": "eslint src --ext .js,.jsx --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,css,md}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx,css,md}\"",
-    "lint:format": "npm run lint:fix && npm run format"
+    "lint:format": "npm run lint:fix && npm run format",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
