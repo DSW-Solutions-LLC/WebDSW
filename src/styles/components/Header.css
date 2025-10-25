@@ -78,6 +78,46 @@
   transform: scale(1.1);
 }
 
+.logo-image {
+  width: 188px;
+  height: 188px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive logo sizes */
+@media (max-width: 1440px) {
+  .logo-image {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .logo-image {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 .logo-text {
   width: 304px;
   height: 30px;

@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { NAVIGATION_ITEMS } from '../../constants';
 import { useScroll } from '../../hooks/useScroll';
 import { classNames } from '../../utils';
+import logoDsw from '../../assets/logo_dsw2.png';
 import '../../styles/components/Header.css';
 
 const Header = () => {
@@ -24,18 +25,11 @@ const Header = () => {
       <nav className='nav'>
         <div className='nav-logo'>
           <div className='logo-icon'>
-            <svg
-              width='32'
-              height='32'
-              viewBox='0 0 32 32'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <rect width='32' height='32' rx='8' fill='#7728c0' />
-              <path d='M8 12L16 8L24 12V20L16 24L8 20V12Z' fill='white' />
-              <path d='M16 8V24' stroke='white' strokeWidth='2' />
-              <path d='M8 12L24 12' stroke='white' strokeWidth='2' />
-            </svg>
+            <img 
+              src={logoDsw} 
+              alt='DSW Solutions Logo' 
+              className='logo-image'
+            />
           </div>
           <span className='logo-text'>DSW Solutions</span>
         </div>
