@@ -12,7 +12,14 @@ export const useScroll = () => {
       setScrollY(currentScrollY);
       setIsScrolling(true);
 
-      const sections = ['home', 'services', 'projects', 'contact'];
+      const sections = [
+        'home',
+        'services',
+        'stats',
+        'success-stories',
+        'partners',
+        'contact',
+      ];
       const sectionElements = sections.map(id => document.getElementById(id));
 
       let currentSection = 'home';
@@ -32,7 +39,6 @@ export const useScroll = () => {
       });
 
       setActiveSection(currentSection);
-
       setTimeout(() => setIsScrolling(false), 150);
     }, 10),
     []

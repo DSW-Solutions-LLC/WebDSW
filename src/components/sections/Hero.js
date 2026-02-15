@@ -1,34 +1,40 @@
+import { useScroll } from '../../hooks/useScroll';
 import '../../styles/components/Hero.css';
-import codeImage from '../../assets/code.png';
-import pcheroImage from '../../assets/pchero.png';
 
 const Hero = () => {
+  const { scrollToSection } = useScroll();
+
   return (
     <section id='home' className='hero'>
-      <div
-        className='hero-background'
-        style={{
-          backgroundImage: `url(${codeImage})`,
-          opacity: 0.2,
-          mixBlendMode: 'luminosity',
-        }}
-      />
-      <div className='container'>
-        <div className='hero-content'>
-          <h1 className='hero-title'>Innovación y Tecnología al alcance</h1>
-          <p className='hero-subtitle'>
-            Desarrollamos soluciones a medida para potenciar tu negocio.
-          </p>
-          <button className='hero-btn'>Contáctanos</button>
-        </div>
+      <div className='hero-animated-bg' />
+      <div className='hero-overlay' />
 
-        <div className='hero-visual'>
-          <img
-            src={pcheroImage}
-            alt='DSW Solutions Hero'
-            className='hero-image'
-          />
-        </div>
+      {/* Uncomment when you have a video file:
+      <video
+        className='hero-video'
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src='/path-to-video.mp4' type='video/mp4' />
+      </video>
+      */}
+
+      <div className='hero-center'>
+        <h1 className='hero-title'>
+          Donde la ingenieria global se encuentra con la confianza local
+        </h1>
+        <p className='hero-subtitle'>
+          Desarrollamos soluciones tecnologicas a medida para potenciar tu
+          negocio con innovacion y calidad.
+        </p>
+        <button
+          className='hero-cta'
+          onClick={() => scrollToSection('contact')}
+        >
+          Hablemos de tu proyecto
+        </button>
       </div>
     </section>
   );

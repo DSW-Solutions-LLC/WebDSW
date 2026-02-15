@@ -5,11 +5,16 @@
   right: 0;
   width: 100%;
   height: 88px;
-  background-color: var(--black);
-  backdrop-filter: blur(10px);
+  background-color: transparent;
+  backdrop-filter: blur(0px);
   z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.header-scrolled {
+  background-color: rgba(8, 2, 13, 0.95);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--gray-800);
-  opacity: 1;
 }
 
 .nav {
@@ -20,39 +25,23 @@
   padding: 18px 0;
   width: 100%;
   margin: 0 auto;
-  max-width: var(--container-xs);
-  opacity: 1;
+  max-width: var(--container-xl);
 }
 
 @media (min-width: 640px) {
-  .nav {
-    max-width: var(--container-sm);
-    padding: 18px 0;
-  }
+  .nav { max-width: var(--container-sm); }
 }
-
 @media (min-width: 768px) {
-  .nav {
-    max-width: var(--container-md);
-  }
+  .nav { max-width: var(--container-md); }
 }
-
 @media (min-width: 1024px) {
-  .nav {
-    max-width: var(--container-lg);
-  }
+  .nav { max-width: var(--container-lg); }
 }
-
 @media (min-width: 1280px) {
-  .nav {
-    max-width: var(--container-xl);
-  }
+  .nav { max-width: var(--container-xl); }
 }
-
 @media (min-width: 1536px) {
-  .nav {
-    max-width: var(--container-2xl);
-  }
+  .nav { max-width: var(--container-2xl); }
 }
 
 .nav-logo {
@@ -68,112 +57,49 @@
   flex-shrink: 0;
 }
 
-.logo-icon svg {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.3s ease;
-}
-
-.logo-icon svg:hover {
-  transform: scale(1.1);
-}
-
 .logo-image {
-  width: 188px;
-  height: 188px;
+  width: 160px;
+  height: 160px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
 .logo-image:hover {
-  transform: scale(1.1);
-}
-
-/* Responsive logo sizes */
-@media (max-width: 1440px) {
-  .logo-image {
-    width: 160px;
-    height: 160px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .logo-image {
-    width: 140px;
-    height: 140px;
-  }
-}
-
-@media (max-width: 768px) {
-  .logo-image {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-image {
-    width: 100px;
-    height: 100px;
-  }
+  transform: scale(1.05);
 }
 
 .logo-text {
-  width: 304px;
-  height: 30px;
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-  font-style: normal;
-  font-size: 42px;
+  font-size: 36px;
   color: #ded7e4;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  opacity: 1;
-  line-height: 100%;
-  letter-spacing: -4%;
-  text-transform: none;
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
   gap: 24px;
-  width: auto;
-  height: 52px;
-  opacity: 1;
-  justify-content: space-between;
 }
 
 .nav-link {
-  color: var(--white);
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   font-family: 'Signika', sans-serif;
   font-weight: 400;
-  font-style: normal;
-  font-size: 28px;
-  line-height: 32px;
-  letter-spacing: -2%;
+  font-size: 18px;
+  line-height: 1;
   transition: color 0.3s ease;
   position: relative;
-  min-width: 90px;
-  height: 52px;
-  opacity: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 8px 12px;
   white-space: nowrap;
   outline: none;
-  padding: 0 12px;
 }
 
-.nav-link:focus {
-  outline: none;
-}
-
-.nav-link:active {
-  outline: none;
-}
+.nav-link:focus { outline: none; }
 
 .nav-link:hover {
   color: var(--primary-400);
@@ -182,24 +108,22 @@
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
+  bottom: 0;
+  left: 12px;
+  right: 12px;
   height: 2px;
   background: linear-gradient(135deg, var(--primary-400), var(--primary-600));
-  transition: width 0.3s ease;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
-.nav-link:hover::after {
-  width: 100%;
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
 }
 
 .nav-link.active {
   color: var(--primary-400);
-}
-
-.nav-link.active::after {
-  width: 100%;
 }
 
 .mobile-menu-btn {
@@ -217,7 +141,7 @@
   background-color: var(--gray-800);
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 1440px) {
   .nav {
     max-width: 100%;
@@ -226,11 +150,19 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .logo-image { width: 120px; height: 120px; }
+  .logo-text { font-size: 28px; }
+}
+
 @media (max-width: 768px) {
   .header {
     height: 72px;
-    background-color: #08020d;
-    backdrop-filter: none;
+  }
+
+  .header-scrolled,
+  .header {
+    background-color: rgba(8, 2, 13, 0.98);
   }
 
   .nav {
@@ -238,19 +170,16 @@
     position: relative;
     width: 100%;
     max-width: 100%;
-    justify-content: space-between;
-    background-color: #08020d;
+    height: 72px;
   }
 
-  .nav-logo {
-    flex-shrink: 0;
-  }
+  .logo-image { width: 100px; height: 100px; }
+  .logo-text { font-size: 22px; }
 
   .mobile-menu-btn {
     display: block;
     position: relative;
     z-index: 10;
-    flex-shrink: 0;
   }
 
   .nav-links {
@@ -259,30 +188,17 @@
     left: 0;
     right: 0;
     width: 100%;
-    background-color: #08020d;
+    background-color: rgba(8, 2, 13, 0.98);
     flex-direction: column;
     padding: 20px;
-    gap: 16px;
+    gap: 8px;
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    justify-content: flex-start;
     z-index: 1000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    min-height: 275px;
     pointer-events: none;
-  }
-
-  .nav-links::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #08020d;
-    z-index: -1;
   }
 
   .nav-links.active {
@@ -293,28 +209,17 @@
   }
 
   .nav-link {
-    font-size: 18px;
-    padding: 8px 0;
-    min-width: auto;
+    font-size: 16px;
+    padding: 12px 0;
     width: 100%;
-    justify-content: flex-start;
-    color: var(--white);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  .nav-link:last-child {
-    border-bottom: none;
-  }
+  .nav-link::after { display: none; }
+  .nav-link:last-child { border-bottom: none; }
 }
 
 @media (max-width: 480px) {
-  .nav {
-    padding: 14px var(--space-3);
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .logo-text {
-    font-size: 20px;
-  }
+  .logo-image { width: 80px; height: 80px; }
+  .logo-text { font-size: 18px; }
 }
