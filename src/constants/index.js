@@ -1,8 +1,20 @@
+import {
+  Zap,
+  Smartphone,
+  Link2,
+  Users,
+  Code,
+  Database,
+  Cloud,
+  Shield,
+  BarChart3,
+} from 'lucide-react';
+
 // Navigation items
 export const NAVIGATION_ITEMS = [
   { id: 'home', label: 'Inicio', href: '#home' },
   { id: 'services', label: 'Servicios', href: '#services' },
-  { id: 'projects', label: 'Proyectos', href: '#projects' },
+  { id: 'success-stories', label: 'Casos de Exito', href: '#success-stories' },
   { id: 'contact', label: 'Contacto', href: '#contact' },
 ];
 
@@ -10,129 +22,185 @@ export const NAVIGATION_ITEMS = [
 export const SERVICES_DATA = [
   {
     id: 'automatizaciones',
+    icon: Zap,
     title: 'Automatizaciones',
-    subtitle: 'Optimiza procesos clave.',
-    intro: 'Creamos soluciones automatizadas que mejoran la eficiencia:',
-    features: [
-      'Micrositios interactivos',
-      'Landing pages para campañas',
-      'Workflows automatizados',
-      'Formularios inteligentes',
-      'Sistemas personalizados',
-    ],
+    description:
+      'Workflows automatizados, formularios inteligentes y sistemas personalizados para optimizar procesos clave.',
   },
   {
     id: 'mobile-apps',
+    icon: Smartphone,
     title: 'Aplicaciones Mobile',
-    subtitle: 'Creamos experiencias móviles.',
-    intro: 'Desde la idea hasta el store, desarrollamos:',
-    features: [
-      'Apps para iOS y Android',
-      'Prototipos funcionales',
-      'PWAS (Progressive Web Apps)',
-      'Integración con APIs',
-      'Paneles de gestión mobile-friendly',
-    ],
+    description:
+      'Apps nativas para iOS y Android, PWAs y prototipos funcionales con integracion a tus sistemas.',
   },
   {
     id: 'integraciones',
+    icon: Link2,
     title: 'Integraciones',
-    subtitle: 'Conectamos plataformas para que trabajen juntas.',
-    intro: 'Creamos integraciones que eliminan silos y automatizan datos:',
-    features: [
-      'APIs REST & GraphQL',
-      'Conectores ERP / CRM / CMS',
-      'Webhooks personalizados',
-      'Integración con plataformas externas',
-      'Sincronización en tiempo real',
-    ],
+    description:
+      'APIs REST & GraphQL, conectores ERP/CRM/CMS y sincronizacion de datos en tiempo real.',
   },
   {
     id: 'outsourcing',
+    icon: Users,
     title: 'Resource Outsourcing',
-    subtitle: 'Sumá talento tech sin costos fijos.',
-    intro: 'Ofrecemos equipos o perfiles especializados de forma flexible:',
-    features: [
-      'Desarrollo frontend / backend',
-      'QA manual y automatizado',
-      'DevOps & Infraestructura',
-      'UX/UI Designers',
-      'Project Managers & Scrum Masters',
-    ],
+    description:
+      'Equipos y perfiles especializados de forma flexible: frontend, backend, QA, DevOps y mas.',
+  },
+  {
+    id: 'desarrollo-web',
+    icon: Code,
+    title: 'Desarrollo Web',
+    description:
+      'Sitios web modernos, plataformas a medida y micrositios interactivos con las ultimas tecnologias.',
+  },
+  {
+    id: 'bases-de-datos',
+    icon: Database,
+    title: 'Bases de Datos',
+    description:
+      'Diseno, migracion y optimizacion de bases de datos relacionales y NoSQL para alto rendimiento.',
+  },
+  {
+    id: 'cloud',
+    icon: Cloud,
+    title: 'Cloud & DevOps',
+    description:
+      'Infraestructura en la nube, CI/CD, contenedores y despliegues automatizados en AWS, Azure y GCP.',
+  },
+  {
+    id: 'seguridad',
+    icon: Shield,
+    title: 'Seguridad',
+    description:
+      'Auditorias de seguridad, implementacion de mejores practicas y proteccion de datos sensibles.',
+  },
+  {
+    id: 'analitica',
+    icon: BarChart3,
+    title: 'Analitica & BI',
+    description:
+      'Dashboards interactivos, reportes automatizados y visualizacion de datos para decisiones inteligentes.',
   },
 ];
 
-// Projects data
-export const PROJECTS_DATA = [
+// Stats data
+export const STATS_DATA = [
+  { id: 'years', value: 10, suffix: '+', label: 'Anos de Experiencia' },
+  { id: 'clients', value: 50, suffix: '+', label: 'Clientes Satisfechos' },
+  { id: 'projects', value: 100, suffix: '+', label: 'Proyectos Entregados' },
+  { id: 'experts', value: 15, suffix: '+', label: 'Expertos en el Equipo' },
+];
+
+// Success Stories data (replaces PROJECTS_DATA)
+export const SUCCESS_STORIES_DATA = [
   {
-    id: 'booking-app-1',
-    title: 'App de Reservas',
+    id: 'story-1',
+    title: 'Transformacion Digital Retail',
     description:
-      'Sistema para gestionar reservas y disponibilidad en tiempo real.',
-    color: 'var(--primary-400)',
+      'Migracion completa de plataforma e-commerce con integracion de inventario en tiempo real.',
+    category: 'E-commerce',
+    link: '#',
   },
   {
-    id: 'booking-app-2',
-    title: 'App de Reservas',
+    id: 'story-2',
+    title: 'App de Gestion Logistica',
     description:
-      'Sistema para gestionar reservas y disponibilidad en tiempo real.',
-    color: 'var(--primary-500)',
+      'Aplicacion mobile para seguimiento de envios y optimizacion de rutas de entrega.',
+    category: 'Logistica',
+    link: '#',
   },
   {
-    id: 'booking-app-3',
-    title: 'App de Reservas',
+    id: 'story-3',
+    title: 'Sistema de Reservas Online',
     description:
-      'Sistema para gestionar reservas y disponibilidad en tiempo real.',
-    color: 'var(--primary-600)',
+      'Plataforma de reservas con disponibilidad en tiempo real y pagos integrados.',
+    category: 'Hoteleria',
+    link: '#',
   },
   {
-    id: 'booking-app-4',
-    title: 'App de Reservas',
+    id: 'story-4',
+    title: 'Dashboard de Analytics',
     description:
-      'Sistema para gestionar reservas y disponibilidad en tiempo real.',
-    color: 'var(--primary-700)',
+      'Panel de control con metricas en tiempo real y reportes automatizados para toma de decisiones.',
+    category: 'Business Intelligence',
+    link: '#',
   },
   {
-    id: 'booking-app-5',
-    title: 'App de Reservas',
+    id: 'story-5',
+    title: 'Automatizacion de Procesos',
     description:
-      'Sistema para gestionar reservas y disponibilidad en tiempo real.',
-    color: 'var(--primary-400)',
+      'Workflows automatizados que redujeron tiempos operativos en un 60% para una empresa financiera.',
+    category: 'Fintech',
+    link: '#',
   },
   {
-    id: 'booking-app-6',
-    title: 'App de Reservas',
+    id: 'story-6',
+    title: 'Plataforma Educativa',
     description:
-      'Sistema para gestionar reservas y disponibilidad en tiempo real.',
-    color: 'var(--primary-500)',
+      'Sistema LMS con videoconferencia integrada, evaluaciones y seguimiento de progreso estudiantil.',
+    category: 'Educacion',
+    link: '#',
   },
-  {
-    id: 'booking-app-7',
-    title: 'App de Reservas',
-    description:
-      'Sistema para gestionar reservas y disponibilidad en tiempo real.',
-    color: 'var(--primary-600)',
-  },
-  {
-    id: 'booking-app-8',
-    title: 'App de Reservas',
-    description:
-      'Sistema para gestionar reservas y disponibilidad en tiempo real.',
-    color: 'var(--primary-700)',
-  },
+];
+
+// Partners data
+export const PARTNERS_DATA = [
+  { id: 'aws', name: 'AWS' },
+  { id: 'google-cloud', name: 'Google Cloud' },
+  { id: 'microsoft', name: 'Microsoft' },
+  { id: 'react', name: 'React' },
+  { id: 'nodejs', name: 'Node.js' },
+  { id: 'salesforce', name: 'Salesforce' },
+  { id: 'docker', name: 'Docker' },
+  { id: 'mongodb', name: 'MongoDB' },
 ];
 
 // Social media links
 export const SOCIAL_LINKS = [
   { id: 'facebook', icon: 'Facebook', href: '#' },
   { id: 'instagram', icon: 'Instagram', href: '#' },
-  { id: 'x', icon: 'X', href: '#' },
+  { id: 'linkedin', icon: 'Linkedin', href: '#' },
+  { id: 'youtube', icon: 'Youtube', href: '#' },
+];
+
+// Footer links
+export const FOOTER_LINKS = [
+  {
+    title: 'Empresa',
+    links: [
+      { label: 'Inicio', href: '#home' },
+      { label: 'Servicios', href: '#services' },
+      { label: 'Casos de Exito', href: '#success-stories' },
+      { label: 'Sobre Nosotros', href: '#about-us' },
+    ],
+  },
+  {
+    title: 'Servicios',
+    links: [
+      { label: 'Automatizaciones', href: '#services' },
+      { label: 'Apps Mobile', href: '#services' },
+      { label: 'Integraciones', href: '#services' },
+      { label: 'Cloud & DevOps', href: '#services' },
+    ],
+  },
+  {
+    title: 'Legal',
+    links: [
+      { label: 'Politica de Privacidad', href: '#' },
+      { label: 'Aviso Legal', href: '#' },
+      { label: 'Sitemap', href: '#' },
+    ],
+  },
 ];
 
 // Company information
 export const COMPANY_INFO = {
   name: 'DSW Solutions',
   email: 'contacto@dswsolutions.com',
+  motto:
+    'Software Factory que crea soluciones tecnologicas innovadoras. Nuestro equipo esta formado por expertos apasionados.',
   copyright: '© 2024 DSW Solutions. Todos los derechos reservados.',
 };
 

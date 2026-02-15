@@ -8,7 +8,9 @@ import '../../styles/components/Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { activeSection, scrollToSection } = useScroll();
+  const { activeSection, scrollY, scrollToSection } = useScroll();
+
+  const isScrolled = scrollY > 50;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,17 +23,17 @@ const Header = () => {
   };
 
   return (
-    <header className='header'>
+    <header className={classNames('header', isScrolled && 'header-scrolled')}>
       <nav className='nav'>
         <div className='nav-logo'>
           <div className='logo-icon'>
-            <img 
-              src={logoDsw} 
-              alt='DSW Solutions Logo' 
+            <img
+              src={logoDsw}
+              alt='DSW Solutions Logo'
               className='logo-image'
             />
           </div>
-          <span className='logo-text'>DSW Solutions</span>
+          <span className='logo-text'></span>
         </div>
         <div className={classNames('nav-links', isMenuOpen && 'active')}>
           {NAVIGATION_ITEMS.map(item => (

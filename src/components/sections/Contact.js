@@ -2,7 +2,6 @@ import { FORM_FIELDS } from '../../constants';
 import { useForm } from '../../hooks/useForm';
 import { classNames } from '../../utils';
 import '../../styles/components/Contact.css';
-import contactImage from '../../assets/contact.png';
 
 const Contact = () => {
   const { formData, errors, isSubmitting, handleChange, handleSubmit } =
@@ -14,8 +13,6 @@ const Contact = () => {
     });
 
   const onSubmit = async () => {
-    // Aquí iría la lógica para enviar el formulario
-    // Simular envío
     await new Promise(resolve => setTimeout(resolve, 1000));
   };
 
@@ -69,33 +66,13 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id='contact'
-      className='contact section'
-      style={{
-        background: `
-          linear-gradient(
-            180deg,
-            #08020D 0%,
-            rgba(8, 2, 13, 0.9) 20%,
-            rgba(8, 2, 13, 0.8) 40%,
-            rgba(8, 2, 13, 0.6) 60%,
-            rgba(71, 18, 115, 0.8) 100%
-          ),
-          url(${contactImage})
-        `,
-        backgroundSize: '100% auto',
-        backgroundPosition: 'center center',
-        backgroundRepeat: 'no-repeat',
-        overflow: 'hidden',
-      }}
-    >
+    <section id='contact' className='contact section'>
       <div className='container'>
         <div className='contact-content'>
           <div className='contact-form-container'>
-            <h2 className='contact-title'>Contáctanos</h2>
+            <h2 className='contact-title'>Contactanos</h2>
             <p className='contact-description'>
-              Estamos aquí para ayudarte. Completa el formulario y nos pondremos
+              Estamos aqui para ayudarte. Completa el formulario y nos pondremos
               en contacto contigo lo antes posible.
             </p>
 
@@ -111,10 +88,10 @@ const Contact = () => {
 
               <button
                 type='submit'
-                className={classNames('btn', 'btn-primary', 'submit-btn')}
+                className='submit-btn'
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Enviando...' : 'Enviar'}
+                {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
               </button>
             </form>
           </div>
