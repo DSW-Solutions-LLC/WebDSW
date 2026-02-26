@@ -207,12 +207,41 @@ npm test -- --coverage
 npm run build
 ```
 
+### Deployment en Hostinger VPS + Docker
+
+Para desplegar en Hostinger con Docker + HTTPS:
+
+📖 **[Ver guía completa de deployment →](./DEPLOYMENT.md)**
+
+Resumen rápido:
+```bash
+# 1. Clone y configure certificados
+bash init-certbot.sh
+
+# 2. Levante Docker
+docker-compose up -d --build
+
+# 3. Visite https://dswsolutions.io ✅
+```
+
 ### Optimizaciones de Producción
 
 - **Code Splitting**: Carga lazy de componentes
 - **Minificación**: CSS y JS optimizados
 - **Compresión**: Gzip habilitado
 - **Caching**: Headers de cache configurados
+- **HTTPS**: Let's Encrypt + Certificados renovación automática
+- **Docker**: Multi-stage build optimizado
+- **Nginx**: Configuración de seguridad y performance
+
+## 📚 Documentación
+
+| Documento | Descripción |
+|-----------|------------|
+| **[PROJECT_CONTEXT.md](./PROJECT_CONTEXT.md)** | 📊 Análisis completo del proyecto, estructura y tech stack |
+| **[DEPLOYMENT.md](./DEPLOYMENT.md)** | 🚀 Guía paso a paso para deployment en Hostinger + Docker |
+| **[HTTPS_SETUP.md](./HTTPS_SETUP.md)** | 🔐 Configuración de HTTPS con Let's Encrypt |
+| **[DEVELOPMENT.md](./DEVELOPMENT.md)** | 🛠️ Guía de desarrollo local |
 
 ## 📊 Performance
 
