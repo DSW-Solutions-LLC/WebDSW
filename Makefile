@@ -1,6 +1,6 @@
 DOMAIN = dswsolutions.io
 
-.PHONY: upweb stop restart logs renew help
+.PHONY: upweb deploy stop restart logs renew help
 
 # Comprueba si ya existen los certificados en el volumen de Docker
 CERT_EXISTS := $(shell docker volume inspect webdsw_letsencrypt 2>/dev/null | grep -c '"Mountpoint"' || echo 0)
@@ -9,6 +9,7 @@ help:
 	@echo ""
 	@echo "Comandos disponibles:"
 	@echo "  make upweb    Levanta la app completa (obtiene SSL si es la primera vez)"
+	@echo "  make deploy   Actualiza desde el repo y reconstruye la app"
 	@echo "  make stop     Detiene todos los contenedores"
 	@echo "  make restart  Reinicia el servidor web"
 	@echo "  make logs     Ver logs en tiempo real"
@@ -42,6 +43,13 @@ upweb:
 		echo "  App corriendo en: https://$(DOMAIN)"; \
 		echo "============================================"; \
 	fi
+
+deploy:
+	@echo "==> Descargando últimos cambios del repo..."
+	git pull
+	@echo "==> Reconstruyendo y reiniciando la app..."
+	docker compose up -d --build web
+	@echo "==> ¡Deploy completado! https://$(DOMAIN)"
 
 stop:
 	@echo "==> Deteniendo contenedores..."

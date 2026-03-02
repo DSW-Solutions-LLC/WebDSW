@@ -39,7 +39,15 @@ const SuccessStories = () => {
           <div className='stories-carousel' ref={scrollRef}>
             {SUCCESS_STORIES_DATA.map(story => (
               <div key={story.id} className='story-card'>
-                <div className='story-image-placeholder'>
+                <div className='story-image-wrapper'>
+                  <img
+                    src={story.image}
+                    alt={story.imageAlt}
+                    className='story-img'
+                    loading='lazy'
+                    width={680}
+                    height={400}
+                  />
                   <span className='story-category'>{story.category}</span>
                 </div>
                 <div className='story-content'>
