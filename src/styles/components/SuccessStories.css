@@ -87,13 +87,30 @@
   box-shadow: var(--shadow-card-hover);
 }
 
-.story-image-placeholder {
+.story-image-wrapper {
+  position: relative;
   width: 100%;
   height: 200px;
+  overflow: hidden;
   background: linear-gradient(135deg, var(--primary-100), var(--primary-50));
-  display: flex;
-  align-items: flex-end;
-  padding: 16px;
+}
+
+.story-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.story-card:hover .story-img {
+  transform: scale(1.05);
+}
+
+.story-category {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
 }
 
 .story-category {

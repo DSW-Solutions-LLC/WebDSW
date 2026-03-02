@@ -101,6 +101,8 @@ export const SUCCESS_STORIES_DATA = [
     description:
       'Migracion completa de plataforma e-commerce con integracion de inventario en tiempo real.',
     category: 'E-commerce',
+    image: '/images/cases/ecommerce.webp',
+    imageAlt: 'Plataforma e-commerce con integracion de inventario',
     link: '#',
   },
   {
@@ -109,6 +111,8 @@ export const SUCCESS_STORIES_DATA = [
     description:
       'Aplicacion mobile para seguimiento de envios y optimizacion de rutas de entrega.',
     category: 'Logistica',
+    image: '/images/cases/logistica.webp',
+    imageAlt: 'App mobile de seguimiento logistico',
     link: '#',
   },
   {
@@ -117,6 +121,8 @@ export const SUCCESS_STORIES_DATA = [
     description:
       'Plataforma de reservas con disponibilidad en tiempo real y pagos integrados.',
     category: 'Hoteleria',
+    image: '/images/cases/hoteleria.webp',
+    imageAlt: 'Sistema de reservas online para hoteleria',
     link: '#',
   },
   {
@@ -125,6 +131,8 @@ export const SUCCESS_STORIES_DATA = [
     description:
       'Panel de control con metricas en tiempo real y reportes automatizados para toma de decisiones.',
     category: 'Business Intelligence',
+    image: '/images/cases/analytics.webp',
+    imageAlt: 'Dashboard de analytics con metricas en tiempo real',
     link: '#',
   },
   {
@@ -133,6 +141,8 @@ export const SUCCESS_STORIES_DATA = [
     description:
       'Workflows automatizados que redujeron tiempos operativos en un 60% para una empresa financiera.',
     category: 'Fintech',
+    image: '/images/cases/fintech.webp',
+    imageAlt: 'Automatizacion de procesos para empresa financiera',
     link: '#',
   },
   {
@@ -141,6 +151,8 @@ export const SUCCESS_STORIES_DATA = [
     description:
       'Sistema LMS con videoconferencia integrada, evaluaciones y seguimiento de progreso estudiantil.',
     category: 'Educacion',
+    image: '/images/cases/educacion.webp',
+    imageAlt: 'Plataforma educativa con videoconferencia integrada',
     link: '#',
   },
 ];
