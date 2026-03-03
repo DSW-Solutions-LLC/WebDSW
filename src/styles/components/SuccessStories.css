@@ -44,6 +44,12 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
   padding: 8px 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  scroll-padding-left: 16px;
+  scroll-padding-right: 16px;
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
 }
 
 .stories-carousel::-webkit-scrollbar {
@@ -192,7 +198,7 @@
     flex: 0 0 280px;
   }
 
-  .story-image-placeholder {
+  .story-image-wrapper {
     height: 160px;
   }
 
@@ -216,6 +222,25 @@
   }
 
   .story-card {
-    flex: 0 0 85vw;
+    flex: 0 0 calc(100vw - 32px);
+    max-width: calc(100vw - 32px);
+  }
+
+  .stories-carousel {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Ultra-pequeñas pantallas (< 370px) */
+@media (max-width: 370px) {
+  .story-card {
+    flex: 0 0 calc(100vw - 24px);
+    max-width: calc(100vw - 24px);
+  }
+
+  .stories-carousel {
+    gap: 16px;
+    padding: 8px 12px;
   }
 }
