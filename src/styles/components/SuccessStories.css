@@ -222,8 +222,8 @@
   }
 
   .story-card {
-    flex: 0 0 calc(100vw - 32px);
-    max-width: calc(100vw - 32px);
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .stories-carousel {
@@ -235,8 +235,8 @@
 /* Ultra-pequeñas pantallas (< 370px) */
 @media (max-width: 370px) {
   .story-card {
-    flex: 0 0 calc(100vw - 24px);
-    max-width: calc(100vw - 24px);
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .stories-carousel {
