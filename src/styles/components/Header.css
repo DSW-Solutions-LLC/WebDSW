@@ -7,8 +7,9 @@
   height: 88px;
   background-color: transparent;
   backdrop-filter: blur(0px);
-  z-index: 1000;
+  z-index: 1030;
   transition: all 0.4s ease;
+  overflow: visible;
 }
 
 .header-scrolled {
@@ -196,7 +197,7 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    z-index: 1000;
+    z-index: 1031;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     pointer-events: none;
   }
@@ -220,6 +221,6 @@
 }
 
 @media (max-width: 480px) {
-  .logo-image { width: 80px; height: 80px; }
+  .logo-image { width: 56px; height: 56px; }
   .logo-text { font-size: 18px; }
 }

@@ -40,14 +40,15 @@ const SuccessStories = () => {
             {SUCCESS_STORIES_DATA.map(story => (
               <div key={story.id} className='story-card'>
                 <div className='story-image-wrapper'>
-                  <img
-                    src={story.image}
-                    alt={story.imageAlt}
-                    className='story-img'
-                    loading='lazy'
-                    width={680}
-                    height={400}
-                  />
+                  <picture>
+                    <source media='(max-width: 768px)' srcSet={story.imageMobile} />
+                    <img
+                      src={story.image}
+                      alt={story.imageAlt}
+                      className='story-img'
+                      loading='lazy'
+                    />
+                  </picture>
                   <span className='story-category'>{story.category}</span>
                 </div>
                 <div className='story-content'>
