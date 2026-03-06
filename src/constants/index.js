@@ -163,8 +163,8 @@ export const SUCCESS_STORIES_DATA = [
   },
 ];
 
-// Partners data
-export const PARTNERS_DATA = [
+// Tech Stack data
+export const TECH_STACK_DATA = [
   { id: 'aws', name: 'AWS' },
   { id: 'google-cloud', name: 'Google Cloud' },
   { id: 'microsoft', name: 'Microsoft' },
