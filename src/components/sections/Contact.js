@@ -1,9 +1,14 @@
+import { useState } from 'react';
 import { FORM_FIELDS } from '../../constants';
 import { useForm } from '../../hooks/useForm';
 import { classNames } from '../../utils';
+import { contactService } from '../../services/api';
 import '../../styles/components/Contact.css';
 
 const Contact = () => {
+  const [submitStatus, setSubmitStatus] = useState(null); // null | 'success' | 'error'
+  const [submitError, setSubmitError] = useState('');
+
   const { formData, errors, isSubmitting, handleChange, handleSubmit } =
     useForm({
       firstName: '',
@@ -12,8 +17,40 @@ const Contact = () => {
       message: '',
     });
 
-  const onSubmit = async () => {
-    await new Promise(resolve => setTimeout(resolve, 1000));
+  const onSubmit = async data => {
+    setSubmitStatus(null);
+    setSubmitError('');
+
+    let handled = false;
+    try {
+      const response = await contactService.send({
+        name: `${data.firstName} ${data.lastName}`.trim(),
+        email: data.email,
+        message: data.message,
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        return;
+      }
+
+      let errorMsg = 'Error al enviar el mensaje. Intentá de nuevo más tarde.';
+      if (response.status === 400) {
+        const body = await response.json();
+        errorMsg = Object.values(body.errors || {})[0]?.[0] || 'Datos inválidos. Revisá los campos.';
+      }
+
+      handled = true;
+      setSubmitStatus('error');
+      setSubmitError(errorMsg);
+      throw new Error(errorMsg);
+    } catch (err) {
+      if (!handled) {
+        setSubmitStatus('error');
+        setSubmitError('Error de conexión. Revisá tu internet e intentá de nuevo.');
+      }
+      throw err;
+    }
   };
 
   const renderFormField = field => {
@@ -89,10 +126,21 @@ const Contact = () => {
               <button
                 type='submit'
                 className='submit-btn'
-                disabled={isSubmitting}
+                disabled={isSubmitting || submitStatus === 'success'}
               >
                 {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
               </button>
+
+              {submitStatus === 'success' && (
+                <p className='form-feedback form-feedback--success'>
+                  ¡Mensaje enviado! Te responderemos a la brevedad.
+                </p>
+              )}
+              {submitStatus === 'error' && (
+                <p className='form-feedback form-feedback--error'>
+                  {submitError}
+                </p>
+              )}
             </form>
           </div>
         </div>
