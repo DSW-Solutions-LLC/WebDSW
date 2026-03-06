@@ -15,6 +15,21 @@ services:
     environment:
       - DOMAIN=dswsolutions.io
 
+  api:
+    build:
+      context: ../webdsw-api
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    expose:
+      - "8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - Gmail__ClientId=${Gmail__ClientId}
+      - Gmail__ClientSecret=${Gmail__ClientSecret}
+      - Gmail__RefreshToken=${Gmail__RefreshToken}
+      - Gmail__FromEmail=${Gmail__FromEmail}
+      - Contact__ToEmail=${Contact__ToEmail}
+
   # Nginx temporal solo para el ACME challenge (primera vez)
   web-init:
     image: nginx:alpine

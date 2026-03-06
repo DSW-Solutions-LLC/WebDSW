@@ -1,6 +1,6 @@
 DOMAIN = dswsolutions.io
 
-.PHONY: upweb deploy stop restart logs renew help
+.PHONY: upweb deploy stop restart logs logs-api renew help
 
 # Comprueba si ya existen los certificados en el volumen de Docker
 CERT_EXISTS := $(shell docker volume inspect webdsw_letsencrypt 2>/dev/null | grep -c '"Mountpoint"' || echo 0)
@@ -21,7 +21,7 @@ upweb:
 	@echo "==> Verificando estado de certificados SSL..."
 	@if docker compose --profile certbot run --rm certbot certificates 2>/dev/null | grep -q "$(DOMAIN)"; then \
 		echo "==> Certificados encontrados. Levantando app con HTTPS..."; \
-		docker compose up -d --build web; \
+		docker compose up -d --build web api; \
 	else \
 		echo "==> No se encontraron certificados. Iniciando configuración SSL..."; \
 		echo ""; \
@@ -37,7 +37,7 @@ upweb:
 		echo ""; \
 		echo "--- [4/4] Levantando app completa con HTTPS..."; \
 		docker compose --profile certbot down; \
-		docker compose up -d --build web; \
+		docker compose up -d --build web api; \
 		echo ""; \
 		echo "============================================"; \
 		echo "  App corriendo en: https://$(DOMAIN)"; \
@@ -48,7 +48,7 @@ deploy:
 	@echo "==> Descargando últimos cambios del repo..."
 	git pull
 	@echo "==> Reconstruyendo y reiniciando la app..."
-	docker compose up -d --build web
+	docker compose up -d --build web api
 	@echo "==> ¡Deploy completado! https://$(DOMAIN)"
 
 stop:
@@ -57,10 +57,13 @@ stop:
 
 restart:
 	@echo "==> Reiniciando servidor web..."
-	docker compose restart web
+	docker compose restart web api
 
 logs:
-	docker compose logs -f web
+	docker compose logs -f web api
+
+logs-api:
+	docker compose logs -f api
 
 renew:
 	@echo "==> Renovando certificados SSL (la app seguirá corriendo)..."
